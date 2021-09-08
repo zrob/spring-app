@@ -1,12 +1,12 @@
 apiVersion: kontinue.io/v1alpha1
 kind: Workload
 metadata:
-  name: sample-app-java
+  name: spring-app
   labels:
-    app.tanzu.vmware.com/workload-type: thing
+    app.tanzu.vmware.com/workload-type: web
 spec:
   source:
     git:
-      url: https://github.com/spring-projects/spring-petclinic
+      url: https://github.com/zrob/spring-app
       ref:
         branch: main
