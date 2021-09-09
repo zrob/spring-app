@@ -1,0 +1,22 @@
+accelerator:
+  displayName: VMworld Spring Accelerator
+  description: A sample spring application for VMworld.
+  iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-tanzu-light.png
+  tags:
+    - java
+    - spring
+    - vmworld
+  options:
+    - name: name
+      label: Workload name
+      required: true
+engine:
+  merge:
+    - type: YTT
+    - include:
+        - "**"
+  chain:
+    - type: ReplaceText
+      substitutions:
+        - text: theworkloadname
+          with: "#name"

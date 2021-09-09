@@ -1,12 +1,11 @@
 apiVersion: kontinue.io/v1alpha1
 kind: Workload
 metadata:
-  name: spring-app
+  name: theworkloadname
   labels:
     app.tanzu.vmware.com/workload-type: web
+  run-image: gcr.io/cf-capi/sample-app-java
 spec:
   source:
-    git:
-      url: https://github.com/zrob/spring-app
-      ref:
-        branch: main
+    imgpkgBundle:
+      image: gcr.io/cf-capi/sample-app-java-source
